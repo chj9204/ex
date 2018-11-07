@@ -20,21 +20,9 @@ int main(void)
 	
     while (1) 
     {
-		for(int i = 0 ; i < 2; i++)
-		{
-			for(int j = 0 ; j < 8 ; j++)
-			{
-				if(i == 0)
-				{
-					PORTA = 0x01 << j;
-				}
-				else if(i == 1)
-				{
-					PORTA = 0x80 >> j;
-				}
-				_delay_ms(300);
-			}
-		}
+		PORTA = 0xff;
+		_delay_ms(300);
+		PORTA = 0x00;
+		_delay_ms(300);
     }
 }
-
